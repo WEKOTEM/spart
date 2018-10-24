@@ -3231,7 +3231,7 @@ end
 if #list ~= 0 then
 send(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 else
-send(msg.chat_id_, msg.id_, 1, "📊┇لا توجد بوتات في المجموعه", 1, 'html')
+send(msg.chat_id_, msg.id_, 1, "🚸~ >> لا توجد بوتات في المجموعه", 1, 'html')
 end
 end
 bot.channel_get_bots(msg.chat_id_,cb)
@@ -3245,12 +3245,12 @@ end
 end
 if text:match("^جهاتي$") then
 add = (tonumber(database:get('tshake:'..bot_id..'user:add'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
-send(msg.chat_id_, msg.id_, 1, "📨┇عدد اضافه جهاتك ~⪼ *{"..add.."}*\n📨┇سيتم حذف العدد بعد هذه الرساله", 1, 'md')
+send(msg.chat_id_, msg.id_, 1, "➕~ >>  عدد اضافه جهاتك » *{"..add.."}*\n🔄~ >>  سيتم حذف العدد بعد هذه الرساله", 1, 'md')
 database:del('tshake:'..bot_id..'user:add'..msg.chat_id_..':'..msg.sender_user_id_)
 end
 if text:match("^(عدد السحكات)$") or text:match("^(سحكاتي)$") then
 local edit = database:get('tshake:'..bot_id..'user:editmsg'..msg.chat_id_..':'..msg.sender_user_id_) or 0
-send(msg.chat_id_, msg.id_, 1, "📨┇عدد سحكاتك ~⪼ *{"..edit.."}*", 1, 'md')
+send(msg.chat_id_, msg.id_, 1, "🤣~ >>  عدد سحكاتك » *{"..edit.."}*", 1, 'md')
 end
 if text:match("^مسح قائمه العام$") and tonumber(msg.sender_user_id_) == tonumber(sudo_add) then
 text = '☑┇تم مسح قائمه العام'
