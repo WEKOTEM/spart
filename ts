@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd Tshake
-screen -S Tshake -X kill
-screen -S Tshake ./TsAu
+cd TAGI
+screen -S TAGI -X kill
+screen -S TAGI ./TsAu
