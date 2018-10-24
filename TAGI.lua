@@ -651,7 +651,7 @@ break
 end
 end
 end 
-info = '💬┇بواسطه ~⪼ ['..result.first_name_..'](t.me/'..(result.username_ or 'tshaketeam')..')\n'..text
+info = '👤~>> العضو » ['..result.first_name_..'](t.me/'..(result.username_ or 'th3tg')..')\n'..text
 send(msg.chat_id_, msg.id_, 1,info, 1, 'md')
 end
 getUser(msg.sender_user_id_, keko333)
@@ -669,7 +669,7 @@ break
 end
 end
 end 
-info = '👤┇العضو ~⪼ ['..result.first_name_..'](t.me/'..(result.username_ or 'tshaketeam')..')\n'..text
+info = '👤~>> العضو » ['..result.first_name_..'](t.me/'..(result.username_ or 'th3tg')..')\n'..text
 send(msg.chat_id_, msg.id_, 1,info, 1, 'md')
 end
 getUser(id_tshakex, keko333)
@@ -687,7 +687,7 @@ break
 end
 end
 end 
-info = '👤┇العضو ~⪼ ['..(result.first_name_ or value)..'](t.me/'..(result.username_ or 'tshaketeam')..')\n'..text
+info = '👤~>> العضو » ['..(result.first_name_ or value)..'](t.me/'..(result.username_ or 'th3tg')..')\n'..text
 send(msg.chat_id_, msg.id_, 1,info, 1, 'md')
 end
 getUser(value, keko333)
@@ -698,7 +698,7 @@ function TSadd(msg) -- Function add && rem
 local text = msg.content_.text_
 if (text == 'تعطيل') and not is_sudo(msg) then
 function TSby(extra,result,success)
-info = '💬┇بواسطه ~⪼ ['..result.first_name_..'](t.me/'..(result.username_ or 'tshaketeam')..')\n'
+info = '👤~>> بواسطه » ['..result.first_name_..'](t.me/'..(result.username_ or 'th3tg')..')\n'
 local keko2 = database:get("add"..bot_id)
 if keko2 then
 local keko = "https://api.telegram.org/bot" ..token.. '/getChatMember?chat_id=' .. msg.chat_id_ .. '&user_id='..msg.sender_user_id_
