@@ -5051,6 +5051,14 @@ local text =  [[
 ]]
 send(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
+if r== "اسمي"  then return  "\n" ..check_name(msg.from.first_name).."\n" 
+elseif r== "معرفي" then return  "["..keko_info.."]\n" 
+elseif r== "ايديي" or r=="ايدي 🆔" then return "🧟‍♂*¦* آضـغط على آلآيدي ليتم آلنسـخ\n\n @["..msg.from.username.."] ~⪼ ( `"..msg.sender_user_id_.."` )"
+elseif r=="صورتي" then
+tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = msg.from.id,offset_ = 0,limit_ = 1}, function(arg, data)
+if data.photos_[0] then sendPhoto(msg.to.id,msg.id_,0,1,nil,data.photos_[0].sizes_[1].photo_.persistent_id_,"",dl_cb,nil)
+else sendMsg(msg.to.id,msg.id_,"🚸¦ لا يوجد صوره في بروفايلك ...\n-",'md')
+end end, nil)
 if text:match("^اريد رابط حذف$") or text:match("^رابط حذف$") or text:match("^رابط الحذف$") or text:match("^الرابط حذف$") or text:match("^اريد رابط الحذف$") then
 local text =  [[
 🗑~ >> رابط حذف التلي ، ⬇️
@@ -5488,9 +5496,3 @@ elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then
 tdcli_function ({ID="GetChats", offset_order_="9223372036854775807", offset_chat_id_=0, limit_=20}, dl_cb, nil)
 end
 end
-----------------------------------------------------------------------------
---[[
- تـم برمـجه وتـطوير السـورس ؛ من قبل النـقـيب اركـان مـحمد 
-CH > @TH3TG   ⚀¦⚀   DEV > @ZSSS5
---]]
---------------------------------------
