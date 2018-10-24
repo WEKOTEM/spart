@@ -1943,24 +1943,24 @@ if (f:match("^(.*)(rm -fr)(.*)$")) then
 ts23 = ts23 .. "\n⚠┇حذف ملفات او مجلدات"
 end
 if (f:match("^(.*)(encode)(.*)$")) then 
-ts23 = ts23 .. "\n⚠┇التصال بapi خارجي"
+ts23 = ts23 .. "\n⚠️┇التصال بapi خارجي"
 end
 if (f:match("^(.*)(api.telegram.org/bot)(.*)$")) then 
-ts23 = ts23 .. "\n⚠┇قد يسبب الضعف في البوت"
+ts23 = ts23 .. "\n⚠️┇قد يسبب الضعف في البوت"
 end
 database:sadd("files"..bot_id,name_t[2]..'.lua')
-send(msg.chat_id_, msg.id_, 1, "✔┇تم تفعيل {"..name_t[2]..".lua}\n"..ts23, 1, 'html')
+send(msg.chat_id_, msg.id_, 1, "✔️┇تم تفعيل {"..name_t[2]..".lua}\n"..ts23, 1, 'html')
 else
-send(msg.chat_id_, msg.id_, 1, '⚠┇عذرا لا يمكن تشغيل {'..name_t[2]..'.lua} \n❗┇لانه لا يدعم سورس تشاكي \n 🦁┇[ملفات يدعمها سورس تشاكي](t.me/tshakeFiles)', 1, 'md')
+send(msg.chat_id_, msg.id_, 1, '⚠️┇عذرا لا يمكن تشغيل {'..name_t[2]..'.lua} \n❗️┇لانه لا يدعم سورس تاجي \n ✳️┇[ملفات يدعمها سورس تاجي](t.me/tshakeFiles)', 1, 'md')
 end
 else
-send(msg.chat_id_, msg.id_, 1, '⚠┇عذرا لا يمكن تشغيل {'..name_t[2]..'.lua} \n❗┇لانه لا يدعم سورس تشاكي \n 🦁┇[ملفات يدعمها سورس تشاكي](t.me/tshakeFiles)', 1, 'md')
+send(msg.chat_id_, msg.id_, 1, '⚠️┇عذرا لا يمكن تشغيل {'..name_t[2]..'.lua} \n❗️┇لانه لا يدعم سورس تاجي \n ✳️┇[ملفات يدعمها سورس تاجي](t.me/tshakeFiles)', 1, 'md')
 end
 end
 if text:match("^(تعطيل ملف) (.*)(.lua)$") then
 local name_t = {string.match(text, "^(حذف ملف) (.*)(.lua)$")}
 database:srem("files"..bot_id,name_t[2]..'.lua')
-send(msg.chat_id_, msg.id_, 1, "✖┇تم تعطيل {"..name_t[2]..".lua}", 1, 'html')
+send(msg.chat_id_, msg.id_, 1, "✖️┇تم تعطيل {"..name_t[2]..".lua}", 1, 'html')
 end
 if (text:match("^(مسح جميع الملفات)$"))then
 database:del("files"..bot_id)
@@ -2010,13 +2010,13 @@ end
 
 end --sudo
 if tonumber(msg.sender_user_id_) == tonumber(sudo_add) then
-if text == 'تفعيل التفعيل التلقائي'then
+if text == 'تفعيل العام'then
 database:set("add"..bot_id, "yes")
-send(msg.chat_id_, msg.id_, 1, "☑┇تم تفعيل التفعيل التلقائي", 1, 'html')
+send(msg.chat_id_, msg.id_, 1, "☑️~>>تم تفعيل العام ", 1, 'html')
 end
-if (text == 'تعطيل التفعيل التلقائي') then
+if (text == 'تعطيل العام') then
 database:del("add"..bot_id)
-send(msg.chat_id_, msg.id_, 1, "❎┇تم تعطيل التفعيل التلقائي", 1, 'html')
+send(msg.chat_id_, msg.id_, 1, "❎~>>تم تعطيل العام ", 1, 'html')
 end
 if text:match("^(تعين عدد الاعضاء) (.*)$") then
 local kekoj = {string.match(text, "^(تعين عدد الاعضاء) (.*)$")}
@@ -5027,7 +5027,7 @@ send(msg.chat_id_, msg.id_, 1, (h4 or text), 1, 'html')
 end
 if text:match("^اصدار$") or text:match("^الاصدار$") or text:match("^السورس$") or text:match("^سورس$") then
 local text =  [[
-👋👋🏻┇اهلا بك في سورس تأجي ؛
+👋🏻🏻┇اهلا بك في سورس تأجي ؛
 ✳️┇TAGI TEAM ؛
 
 ✶⊶⊷⊶⊷⊶⊷⊶⊶⊷★⊶⊷⊶⊷⊶⊷⊶⊶⊷✶
