@@ -766,6 +766,14 @@ send(msg.chat_id_, msg.id_, 1, "❕┇المجموعه {"..(k2.title_ or "").."}
 end
 openChat(msg.chat_id_,thsake_info)
 end
+if not we_sudo(msg) then
+local channel = '@TH3TG'
+local url , res = https.request('https://api.telegram.org/bot'.._info.TOKEN..'/getchatmember?chat_id='..channel..'&user_id='..msg.from.id)
+data = JSON.decode(url)
+if res ~= 200 or data.result.status == "left" or data.result.status == "kicked" then
+ return "🚸| آشـترگ بآلقنآ‌‏هہ آولآ "..channel.." \n🔛| ثم آرجع آرسـل تفعيل ."
+end
+end
 if not database:get( 'tshake:'..bot_id.."charge:"..msg.chat_id_) then
 database:set( 'tshake:'..bot_id.."charge:"..msg.chat_id_,true)
 function thsake_info(k1,k2)
