@@ -342,7 +342,7 @@ last_name_ = last_name,
 user_id_ = user_id
 },},}, dl_cb, nil)
 end
---         »»                 sendPhoto                         ««              --
+---         »»                 sendPhoto                         ««              --
 function sendPhoto(chat_id, reply_to_message_id, disable_notification, from_background, reply_markup, photo, caption)
 tdcli_function ({
 ID = "SendMessage",
