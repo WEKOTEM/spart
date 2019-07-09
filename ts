@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd TAGI
-screen -S TAGI -X kill
-screen -S TAGI ./TsAu
+cd spart
+screen -S spart -X kill
+screen -S spart ./TsAu
