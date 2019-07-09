@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
 sudo ls
 reset
-echo -e "\e[38;5;77m    »»     Welcome to install Tagi     ««\e[0m"
+echo -e "\e[38;5;77m    »»     Welcome to install spart     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install Tagi [0%]     ««\e[0m"
 
 sudo apt-get update 
 
 rese
-echo -e "\e[38;5;77m     »»     Welcome to install Tagi     ««\e[0m"
+echo -e "\e[38;5;77m     »»     Welcome to install spart     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install Tagi [2%]     ««\e[0m"
 sudo apt-get upgrade -y
 
 reset
-echo -e "\e[38;5;77m     »»     Welcome to install Tagi     ««\e[0m"
+echo -e "\e[38;5;77m     »»     Welcome to install spart     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install Tagi [3%]     ««\e[0m"
 sudo apt-get install libreadline-dev -y
 reset 
-echo -e "\e[38;5;77m     »»     Welcome to install Tagi     ««\e[0m"
+echo -e "\e[38;5;77m     »»     Welcome to install spart     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install Tagi [4%]     ««\e[0m"
 sudo apt-get install libconfig-dev -y
 
 reset
-echo -e "\e[38;5;77m     »»     Welcome to install Tagi     ««\e[0m"
+echo -e "\e[38;5;77m     »»     Welcome to install spart     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install Tagi [5%]     ««\e[0m"
 sudo apt-get install libssl-dev -y
 
 reset 
-echo -e "\e[38;5;77m     »»     Welcome to install Tagi     ««\e[0m"
+echo -e "\e[38;5;77m     »»     Welcome to install spart     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install Tagi [6%]     ««\e[0m"
 sudo apt-get install lua5.2 -y 
 reset
-echo -e "\e[38;5;77m     »»     Welcome to install Tagi     ««\e[0m"
+echo -e "\e[38;5;77m     »»     Welcome to install spart     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install Tagi [7%]     ««\e[0m"
 sudo apt-get install liblua5.2-dev   -y
 reset 
